@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<style>
+table#t01 caption
+{
+font-size:150%;
+color:slateblue;
+}
+table#t01,tr,td,th
+{
+    font-family:verdana;
+    font-size:90%;
+    color:black;
+    /*border:1px solid white;*/
+    border-collapse:collapse;   
+    text-align:center;
+}
+table#t01 tr:nth-child(even)
+{
+background-color:white;
+}
+table#t01 tr:nth-child(odd)
+{
+background-color:#f6f9f2;
+}
+table#t01 th
+{
+background-color:white; 
+padding:5px;
+text-align:center;
+}
+</style>
+<body onload="all()">
+	<div>
+               <center> <img src="./images/logo.gif" alt="Homepage"></center>
+	</div>
+<center><h1 style="font-size:90%;margin:1% 12%;background-color: dodgerblue; color: white;"><b>ADMIN DASHBOARD</b></h1></center>
+
+<div style="text-align:left; margin: 0% 20%">
+    <table>
+        <thead >
+            <tr style="font-size:65%">
+            <th><pre>            </pre></th>
+            <th><button type="button" class="btn btn-light" style="font-size:150%; background-color: green;  color: white;">Borrowers</button></th>
+            <th><pre>                                                   </pre></th>
+            <th><button type="button" class="btn btn-light" style="font-size:150%; background-color: red; color: white;">Loans in process</button></th>
+            <th><pre>                                          </pre></th>
+            <th><button type="button" class="btn btn-light" style="font-size:150%; background-color: blue; color: white;">Lenders</button></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div style="text-align:left; margin: 0% 20%;">
+    <table id="t01">
+        <thead >
+            <tr style="font-size:65%">
+            <th><button type="button" class="btn btn-light" style="font-size:150%">Name</button></th>
+            <th><button type="button" class="btn btn-light" style="font-size:150%">Loan</button></th>
+            <th><button type="button" class="btn btn-light" style="font-size:150%">Start-Date</button></th>
+            <th><pre>   </pre></th>
+
+            <th><button type="button" class="btn btn-light" style="font-size:150%">Lender</button></th>
+            <th><button type="button" class="btn btn-light" style="font-size:150%">Borrower</button></th>
+            <th><button type="button" class="btn btn-light" style="font-size:150%">Loan</button></th>
+            <th><button type="button" class="btn btn-light" style="font-size:150%">Start-Date</button></th>
+            <th><button type="button" class="btn btn-light" style="font-size:150%">End-Date</button></th>
+            <th><pre>   </pre></th>
+
+            <th><button type="button" class="btn btn-light" style="font-size:150%">Lender</button></th>
+            <th><button type="button" class="btn btn-light" style="font-size:150%">Transactions</button></th>
+            <th><button type="button" class="btn btn-light" style="font-size:150%">Balance</button></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+</body>
+<script>
+function all()
+{
+    var v="";
+    // document.getElementById("table1").innerHTML="";
+    var b=[
+            {
+                "name": "Name20",
+                "loan": "3000",
+                "start": "20.1.2019"
+            },
+            {
+                "name": "Name19",
+                "loan": "3000",
+                "start": "20.1.2019"
+            },
+            {
+                "name": "Name18",
+                "loan": "3000",
+                "start": "20.1.2019"
+            },
+            {
+                "name": "Name17",
+                "loan": "3000",
+                "start": "20.1.2019"
+            }
+        ]
+        var p=[
+            {
+                "lender": "Name20",
+                "borrower":"B1",
+                "loan": "3000",
+                "start": "20.1.2019",
+                "end": "20.6.2019",
+                "f":"1"
+            },
+            {
+                "lender": "Name19",
+                "borrower":"B1",
+                "loan": "3000",
+                "start": "20.1.2019",
+                "end": "20.6.2019",
+                "f":"0"
+            },
+            {
+                "lender": "Name18",
+                "borrower":"B1",
+                "loan": "3000",
+                "start": "20.1.2019",
+                "end": "20.6.2019",
+                "f":"0"
+            },
+            {
+                "lender": "Name17",
+                "borrower":"B1",
+                "loan": "3000",
+                "start": "20.1.2019",
+                "end": "20.6.2019",
+                "f":"1"
+            },{
+                "lender": "Name16",
+                "borrower":"B1",
+                "loan": "3000",
+                "start": "20.1.2019",
+                "end": "20.6.2019",
+                "f":"1"
+            }
+        ]
+        var l=[
+            {
+                "name": "Name20",
+                "transactions": "35",
+                "amount": "45000"
+            },
+            {
+                "name": "Name19",
+                "transactions": "35",
+                "amount": "45000"
+            },
+            {
+                "name": "Name18",
+                "transactions": "35",
+                "amount": "45000"
+            },
+            {
+                "name": "Name17",
+                "transactions": "35",
+                "amount": "45000"
+            }
+        ]
+    var l12=b.length;
+    var l13=p.length;
+    var l14=l.length;
+    var l1=Math.max(l12, l13, l14);
+    while(l1--)
+    {
+        console.log(b[l1]);
+
+        if(b[l1]!=undefined)
+        {
+            val1="<tr>"+
+            "<td>"+b[l1].name+"</td>"+
+            "<td>"+b[l1].loan+"</td>"+
+            "<td>"+b[l1].start+"</td>"+
+            `<td><pre>    </pre></td>`;
+        }
+        else
+        {
+            val1="<tr>"+
+            "<td> </td>"+
+            "<td> </td>"+
+            "<td> </td>"+
+            `<td><pre>    </pre></td>`;
+        }
+
+
+
+            // document.getElementById("borrow").innerHTML=document.getElementById("borrow").innerHTML+val;
+
+        // document.getElementById("process").innerHTML="";
+        console.log(p.length);
+        var l2=l1;
+        var r="color:red;";
+
+        if(p[l2]==undefined)
+        {
+             val2=
+            "<td> </td>"+
+            "<td> </td>"+
+            "<td> </td>"+
+            "<td> </td>"+
+            "<td> </td>"+
+            `<td><pre>    </pre></td>`;
+
+        }
+        else
+        {
+            if (p[l2].f=="0")
+            {
+                val2=
+                "<td>"+p[l2].lender+"</td>"+
+                "<td>"+p[l2].borrower+"</td>"+
+                "<td>"+p[l2].loan+"</td>"+
+                "<td>"+p[l2].start+"</td>"+
+                "<td>"+p[l2].end+"</td>"+
+                `<td><pre>   </pre></td>`;
+            }
+            else
+            {
+                 val2=
+                `<td style=${r}>`+p[l2].lender+"</td>"+
+                `<td style=${r}>`+p[l2].borrower+"</td>"+
+                `<td style=${r}>`+p[l2].loan+"</td>"+
+                `<td style=${r}>`+p[l2].start+"</td>"+
+                `<td style=${r}>`+p[l2].end+"</td>"+
+                `<td><pre>   </pre></td>`;
+            }
+        }
+
+            // document.getElementById("process").innerHTML=document.getElementById("process").innerHTML+"<li>"+val+"</li>";
+
+        // document.getElementById("lender").innerHTML="";
+        console.log(l.length);
+        var l3=l2;
+
+        if(l[l3]==undefined)
+        {
+            val3=
+            "<td> </td>"+
+            "<td> </td>"+
+            "<td> </td>"+
+            "</tr>";
+        }
+        else
+        {
+            val3=
+            "<td>"+l[l3].name+"</td>"+
+            "<td>"+l[l3].transactions+"</td>"+
+            "<td>"+l[l3].amount+"</td>"+
+            "</tr>";
+        }
+
+        console.log(val1);
+        console.log(val2);
+        console.log(val3);
+        v=val1+val2+val3+v;
+    }
+    $( v ).appendTo( "#t01" );
+}
+</script>
+</html>

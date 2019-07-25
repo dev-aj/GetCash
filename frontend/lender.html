@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GetCash | Lender</title>
+	<!-- /*Added Bootstrap CSS Link*/ -->
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+<body>
+<nav class="navbar navbar-light bg-dark">
+  <!-- <button class="navbar-brand">Home</button> -->
+  <a href="./index.html">
+    <button type="button" class="btn btn-outline-success">Home</button>
+  </a>
+  <form class="form-inline">
+    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+    <a href="./index.html">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log Out</button>
+    </a>
+  </form>
+</nav>
+<div style=" height: 300px; max-height: 300px">
+  <div class="card-header" id="Name_lender" style="text-align: center;">
+    <span id="nameSet"></span> 
+  </div>
+  <div class="card-body" >
+  	<span>  
+        <img src="./images/male.png">
+    		<span class="card-title" id="History_lender" style="margin-left: 25%">History</span>
+    		<span class="card-text" id="Amount_already_lend" style="margin-left: 50%">Amount Already Lend</span>
+    </span>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+  <div class="card-footer text-muted">
+  </div>
+</div>
+
+<br>
+<br>
+<!-- Bootstrap Form  -->
+<form style="margin: 3%">
+	<label for="validationDefault01"><h3><b>Select a Borrower to lend</b></h3></label>
+  
+  <ul class="list-group" id="borrowerList">
+    
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span class="badge badge-primary badge-pill">Borrowers Name</span>
+        <span class="badge badge-primary badge-pill">Loan Amount</span>
+        <span class="badge badge-primary badge-pill">Interest Rate</span>
+        <span class="badge badge-primary badge-pill">Click Below To Lend</span>
+    </li>
+</ul>
+<!-- <a href="./payment.html">Name</a>   -->
+</form>
+
+
+
+<!-- Large modal -->
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      Data about User
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Large modal -->
+
+<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/lender.js"></script>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- Added Bootstrap JS script -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</script>
+</html>

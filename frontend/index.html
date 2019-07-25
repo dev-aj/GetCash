@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>GetCash | Home</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/vendor.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/signup_login.css">
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/modernizr.js"></script>
+    <script src="./js/pace.min.js"></script>
+    <!-- <script type="text/javascript" src="./js/signup_login.js"></script> -->
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+</head>
+<body id="top">
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="./index.html">
+                <img src="./images/logo.gif" alt="Homepage">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+                
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                    <li><a class="smoothscroll"  href="#about-lender" title="about">Lending</a></li>
+                    <li><a class="smoothscroll"  href="#about-borrower" title="services">Borrow</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="works">How It Works</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+                </ul>
+    
+                <!-- <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p> -->
+    
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </li>
+                   
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>  <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>Welcome to GetCash</h3>
+
+                <h1>
+                        Multi-purpose short term personal<br> 
+                        loans@Low interest rates<br/>
+                        Privacy of borrowers and lenders<br>
+                         maintained                   
+                    
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="#0" id="lender" onclick="displayManager2(this.id)" class="btn btn--stroke">
+                        LEND MONEY
+                    </a>
+                    <a href="#0" id="borrower" onclick="displayManager2(this.id)" class="btn btn--stroke">
+                        BORROW MONEY
+                    </a>
+                </div>
+
+            </div>
+
+
+
+ <!-- - - - - - - - --  --   -Signup - - - -- - - - - - - - - - - -  -->
+
+      <!--  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+      <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Log In</button>
+ -->
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" id="registerForm">
+          <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account. <a href="#0" id="signin" onclick="displayManager(this.id)">Already have an account</a> </p>
+            <hr>
+            
+            <label for="fn"><b>First Name</b></label>
+            <input type="text" id="fname" placeholder="First Name" name="fname" required>
+
+            <label for="ln"><b>Last Name</b></label>
+            <input type="text" id="lname" placeholder="Last Name" name="lname" required>
+
+            <label for="dob"><b>Date of Birth</b></label>
+            <input type="date" id="dob" placeholder="Date of Birth" name="dob" required>
+
+            <label for="gen"><b>Gender</b></label>
+            <!-- <input type="text" placeholder="Gender(M/F/Others)" name="gen" required> -->
+            <input type="radio" id="male" name="gender" value="male"> Male
+            <input type="radio" id="female" name="gender" value="female"> Female
+            <input type="radio" id="other" name="gender" value="other"> Other  
+
+            <label for="father"><b>Father Name</b></label>
+            <input type="text" id="father" placeholder="Father Name" name="father" required>
+
+            <label for="state"><b>State</b></label>
+            <input type="text" id="state" placeholder="State" name="state" required>
+
+            <label for="city"><b>City</b></label>
+            <input type="text" id="city" placeholder="City" name="city" required>
+
+            <label for="pin"><b>Pin Code</b></label>
+            <input type="text" id="pin" placeholder="Pin Code" name="pin" required>
+
+            <label for="pan"><b>PAN Number</b></label>
+            <input type="text-loader" id="pan" min="10" max="10" placeholder="PAN Number" name="pan">
+
+            <label for="aadhar"><b>Aadhar Number</b></label>
+            <input type="text" id="aadhar" placeholder="Aadhar Number" name="aadhar" required>
+
+            <label for="contact"><b>Contact Number</b></label>
+            <input type="text" id="contact" placeholder="Contact Number" name="contact" required>
+
+            <label for="email"><b>Email / User ID</b></label>
+            <input type="text" id="mail" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw-repeat"><b>Confirm Password</b></label>
+            <input type="password" id="cnfpassword" placeholder="Repeat Password" name="pswrepeat" required>
+
+            <label for="bank"><b>Bank Name</b></label>
+            <input type="text" id="bank" placeholder="Bank Name" name="bank" required>
+
+            <label for="acc"><b>Account Number</b></label>
+            <input type="text" id="account" placeholder="Account Number" name="account" required>
+
+            <label for="ifsc"><b>IFSC Code</b></label>
+            <input type="text" id="ifsc" placeholder="IFSC Code" name="ifsc" required>
+
+            <label for="paytm"><b>Paytm Number</b></label>
+            <input type="text" id="paytm" placeholder="Paytm Number" name="paytm" required>
+
+            <label>
+              <input type="checkbox" id="certificates" name="remember" style="margin-bottom:15px">Submitted 10th and 12th <b>Original Certificates</b>
+            </label>
+            <br/>
+            <label>
+              <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Conditions</a>.</p>
+
+            <div class="clearfix">
+              <button type="button" class="signupbtn" onclick="postData()">Sign Up</button>
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="id02" class="modal">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content">
+          <div class="container">
+            <h1>Log In</h1>
+            <br/>
+            <label for="email"><b>Email / User ID</b></label>
+            <input type="text" placeholder="Enter Email" id="email1" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="psw1" required>
+
+            <label>
+              <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+
+            <div class="clearfix">
+              <button type="button" class="signupbtn" onclick="validate()">Log In</button>
+              <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+<!--       <script type="text/javascript" src="./signup_loginint.js"></script>
+          <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ -->
+
+
+<!-- - - - - - - - --  --   -Signup - - - -- - - - - - - - - - - -  -->
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div> <!-- end home-content -->
+
+
+        <ul class="home-social">
+            <li>
+                <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            
+        </ul> 
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about-->
+    <section id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--dark">Hello There</h3>
+                <h1 class="display-1 display-1--light">We Are GetCash</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <img src="./images/GetCash.png">
+                <p>
+                        Peer-to-Peer Lending is about individuals transacting between themselves for small personal loans, without the need to go through a financial intermediary such as a bank or any other financial institution. 
+                        It is an exciting new way and a very efficient model that matches people who want to lend with people who want to borrow, giving everyone a better deal.
+                        
+                        GetCash is an online financial marketplace that matches lenders and borrowers in a safe and secure environment. GetCash simplify the process of lending and borrowing for their members.                        
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+                
+            <div class="col-block stats__col ">
+                <div class="stats__count">1270</div>
+                <h5>Lenders</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">1505</div>
+                <h5>Borrowers</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">4090</div>
+                <h5>Transactions Completed</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">3200</div>
+                <h5>Happy Clients</h5> 
+            </div>
+
+        </div> <!-- end about-stats -->
+
+        <div class="about__line"></div>
+
+    </section> <!-- end s-about -->
+
+        <!-- Borrower-->
+        <section id='about-borrower' class="s-about-borrower">
+
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                    <div class="col-full">
+                        <h3 class="subhead subhead--dark">Hello There</h3>
+                        <h1 class="display-1 display-1--light">We Are GetCash-Borrowers</h1>
+                    </div>
+                </div> 
+        
+                <div class="row about-desc" data-aos="fade-up">
+                    <div class="col-full">
+                        <img src="./images/Borrower.png" alt="Borrower" />
+                        <!-- <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt. 
+                        </p> -->
+                    </div>
+                </div> 
+         
+                <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+                        
+                    <!-- <div class="col-block stats__col ">
+                        <div class="stats__count">1270</div>
+                        <h5>Lenders</h5>
+                    </div>
+                    <div class="col-block stats__col">
+                        <div class="stats__count">1505</div>
+                        <h5>Borrowers</h5>
+                    </div>
+                    <div class="col-block stats__col">
+                        <div class="stats__count">9990</div>
+                        <h5>Transactions Completed</h5>
+                    </div>
+                    <div class="col-block stats__col">
+                        <div class="stats__count">10200</div>
+                        <h5>Happy Clients</h5> 
+                    </div> -->
+        
+                </div> <!-- end about-stats -->
+        
+                <div class="about__line"></div>
+        
+        </section> <!-- end s-Borrower -->
+
+        <!-- Lender-->
+        <section id='about-lender' class="s-about-lender">
+
+                <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                        <div class="col-full">
+                            <h3 class="subhead subhead--dark">Hello There</h3>
+                            <h1 class="display-1 display-1--light">We Are GetCash-Lenders</h1>
+                        </div>
+                    </div> 
+            
+                    <div class="row about-desc" data-aos="fade-up">
+                        <div class="col-full">
+                            <img src="./images/Lender.png" alt="Borrower" />
+                            <!-- <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt. 
+                            </p> -->
+                        </div>
+                    </div> 
+             
+                    <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+                            
+                        <!-- <div class="col-block stats__col ">
+                            <div class="stats__count">1270</div>
+                            <h5>Lenders</h5>
+                        </div>
+                        <div class="col-block stats__col">
+                            <div class="stats__count">1505</div>
+                            <h5>Borrowers</h5>
+                        </div>
+                        <div class="col-block stats__col">
+                            <div class="stats__count">9990</div>
+                            <h5>Transactions Completed</h5>
+                        </div>
+                        <div class="col-block stats__col">
+                            <div class="stats__count">10200</div>
+                            <h5>Happy Clients</h5> 
+                        </div> -->
+            
+                    </div> <!-- end about-stats -->
+            
+                    <div class="about__line"></div>
+            
+            </section> <!-- end s-Lender -->
+    
+
+ 
+
+    <section id="contact" class="s-contact">
+
+        <div class="overlay"></div>
+        <div class="contact__line"></div>
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Contact Us</h3>
+                <h1 class="display-2 display-2--light">Reach out for a new loan or just say hello</h1>
+            </div>
+        </div>
+
+        <div class="row contact-content" data-aos="fade-up">
+            
+            <div class="contact-primary">
+
+                <h3 class="h6">Send Us A Message</h3>
+
+                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                    <fieldset>
+    
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true" class="full-width h6">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true" class="full-width h6">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true" class="full-width h6"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Submit</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div> 
+            
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+
+            </div> <!-- end contact-primary -->
+
+            <div class="contact-secondary">
+                <div class="contact-info">
+
+                    <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
+
+                    <div class="cinfo">
+                        <h5>Where to Find Us</h5>
+                        <p>
+                            BackPackers Hive<br>
+                            Koregaon Park<br>
+                            411001 Pune
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>Email Us At</h5>
+                        <p>
+                            getcashinfinity@gmail.com<br>
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>Call Us At</h5>
+                        <p>
+                            Phone: (+01) 555 1234425<br>
+                            Mobile: (+03) 555 0000<br>
+                            Fax: (+14) 555 012101
+                        </p>
+                    </div>
+
+                    <ul class="contact-social">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        
+                    </ul> 
+
+                </div> 
+            </div> 
+
+        </div> 
+
+    </section> 
+
+
+    <!-- foooter-->
+    <footer>
+
+        <div class="row footer-main">
+
+            <div class="col-six tab-full left footer-desc">
+
+                <div class="footer-logo">  </div>
+                Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Quaerat voluptas autem necessitatibus vitae aut.
+
+            </div>
+
+            <div class="col-six tab-full right footer-subscribe">
+
+                <h4>Get Notified</h4>
+                <p>Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae aut non alias sed quia. Ut itaque enim optio ut excepturi deserunt iusto porro.</p>
+
+                <div class="subscribe-form">
+                    <form id="mc-form" class="group" novalidate="true">
+                        <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+                        <input type="submit" name="subscribe" value="Subscribe">
+                        <label for="mc-email" class="subscribe-message"></label>
+                    </form>
+                </div>
+
+            </div>
+
+        </div> <!-- end footer-main -->
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright GetCash 2019</span> 
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> 
+
+    </footer> 
+
+
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./js/signup_login.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
